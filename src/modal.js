@@ -4,6 +4,13 @@ import toDoUrlM from './images/checklistM.png';
 import foldersUrlM from './images/folderM.png';
 import cross from './images/cross.png';
 
+const menu = document.querySelector(".menu");
+menu.addEventListener('click', () => {
+    const mobileModalContainer = modal();
+    const body = document.body;
+    body.appendChild(mobileModalContainer);
+});
+
 const modal = () => {
     const body = document.body;
     const close = document.createElement("div");
@@ -107,5 +114,3 @@ const modalProject = () => {
 
     return mobFolders;
 }
-
-export default modal;
