@@ -1,10 +1,20 @@
 import './index.css';
-
 import homeUrlM from './images/homeM.png';
 import toDoUrlM from './images/checklistM.png';
 import foldersUrlM from './images/folderM.png';
+import cross from './images/cross.png';
 
 const modal = () => {
+    const body = document.body;
+    const close = document.createElement("div");
+    close.classList.add("close");
+
+    const crossIcon = new Image();
+    crossIcon.height = 30;
+    crossIcon.width = 30;
+    crossIcon.src = cross;
+    close.appendChild(crossIcon);
+
     const mobileModalContainer = document.createElement("div");
     mobileModalContainer.classList.add("mobileModalContainer");
 
@@ -15,7 +25,13 @@ const modal = () => {
     mobileModal.appendChild(modalToDo());
     mobileModal.appendChild(modalProject());
 
+    mobileModalContainer.appendChild(close);
     mobileModalContainer.appendChild(mobileModal);
+
+    close.addEventListener('click', () => {
+        body.removeChild(mobileModalContainer);    
+    });
+
     return mobileModalContainer;
 }
 
