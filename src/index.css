@@ -115,7 +115,8 @@ html {
     display: flex;
     gap:20px;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 80px;
+    font-size: 20px;
 }
 
 .mobileModalContainer {
@@ -138,6 +139,7 @@ html {
 .mob-folders{
     display: flex;
     gap: 10px;
+
 }
 
 @media (min-width: 280px) and (max-width:790px) {
