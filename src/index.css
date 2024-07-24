@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -9,19 +10,17 @@ body, html {
     grid-template-columns: 2fr 8fr;
     grid-template-rows: 1fr 8fr;
     grid-template-areas: "nav todo"
-    "nav display";
-    height: 100%; 
+        "nav display";
+    height: 100%;
     width: 100%;
     font-family: 'Quicksand', sans-serif;
 }
 
 .todo {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     justify-content: space-between;
     padding: 20px;
-    border: solid;
-    border-color: red;
 }
 
 .menu {
@@ -33,50 +32,122 @@ body, html {
 
 .name {
     font-weight: 500;
-    font-size: 30px; /* use media queries to set diff font size depending on screen*/
+    font-size: 30px;
     display: flex;
     justify-content: center;
     grid-area: todo;
     padding-top: 20px;
 }
 
+
 .nav {
     grid-area: nav;
     background-color: #40bcd8;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 20px;
-    font-size: 20px;
+    font-size: 25px;
     gap: 10px;
     padding-top: 30px;
-    min-width: 180px;
+    min-width: 120px;
+}
+
+.mobHome:hover,
+.mob-to-do:hover,
+.mob-folders:hover {
+    transform: scale(1.10);
+    -webkit-transform: scale(1.10);
+    -ms-transform: scale(1.10);
+    cursor: pointer;
+}
+
+.home:hover,
+.folders:hover,
+.to-do:hover {
+    transform: scale(1.10);
+    -webkit-transform: scale(1.10);
+    -ms-transform: scale(1.10);
+    cursor: pointer;
+}
+
+.menu:hover {
+    transform: scale(1.10);
+    -webkit-transform: scale(1.10);
+    -ms-transform: scale(1.10);
+    cursor: pointer;
+}
+
+.nav-cont {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30%;
+    gap: 40px;
+}
+
+.home,
+.folders,
+.to-do {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .home {
-    min-height: 40px;
+    cursor: pointer;
 }
 
-.all {
-    min-height: 40px;
+.folders {
+    cursor: pointer;
 }
 
-.projects {
-    min-height: 40px;
+.to-do {
+    cursor: pointer;
 }
+
 
 .display {
     grid-area: display;
-    border: solid;
-    border-color: blue;
 }
 
-@media (min-width: 420px) and (max-width:790px) {
+.mobileModal{
+    padding: 20px;
+    display: flex;
+    gap:20px;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.mobileModalContainer {
+    position: fixed;
+    top: 0;
+    transition: left 0.3s ease; /* Smooth transition */
+    z-index: 1000;
+    overflow-y: auto;
+    height: 100vh;
+    min-width: 200px;
+    background-color: #40bcd8;
+}
+
+.mob-nameList {
+    font-size: 20px;
+}
+
+.mobHome,
+.mob-to-do,
+.mob-folders{
+    display: flex;
+    gap: 10px;
+}
+
+@media (min-width: 280px) and (max-width:790px) {
     .name {
         font-size: 25px;
     }
 
     .menu {
         display: block;
+        margin-top: 20px;
     }
 
     .nav {
@@ -87,7 +158,7 @@ body, html {
         grid-template-columns: 2fr;
         grid-template-rows: 1fr 8fr;
         grid-template-areas: "todo"
-        "display";
+            "display";
     }
-}
 
+}
