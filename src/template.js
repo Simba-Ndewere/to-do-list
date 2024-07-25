@@ -21,8 +21,8 @@ const templateDom = () => {
 
     const toDo = document.querySelector(".to-do-Icon");
     const toDoIcon = new Image();
-    toDoIcon.height = 30;
-    toDoIcon.width = 30;
+    toDoIcon.height = 32;
+    toDoIcon.width = 32;
     toDoIcon.src = toDoUrl;
     toDo.appendChild(toDoIcon);
 

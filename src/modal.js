@@ -1,4 +1,3 @@
-import './index.css';
 import homeUrlM from './images/homeM.png';
 import toDoUrlM from './images/checklistM.png';
 import foldersUrlM from './images/folderM.png';

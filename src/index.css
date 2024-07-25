@@ -2,7 +2,11 @@ body,
 html {
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 100vh;
+}
+
+.body{
+    height: 100vh;
 }
 
 .container {
@@ -11,9 +15,9 @@ html {
     grid-template-rows: 1fr 8fr;
     grid-template-areas: "nav todo"
         "nav display";
-    height: 100%;
-    width: 100%;
     font-family: 'Quicksand', sans-serif;
+    border: solid;
+    border-color: green;
 }
 
 .todo {
@@ -64,9 +68,12 @@ html {
     flex-direction: column;
     align-items: center;
     min-width: 120px;
+    border: solid;
+    border-color: yellow;
+    min-height: 100vh;
 }
 
-.close {  
+.close {
     float: right;
     height: 40px;
     padding: 10px;
@@ -127,11 +134,53 @@ html {
     cursor: pointer;
 }
 
+.addTaskDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    min-height: 100px;
+    float: left;
+}
+
+.button {
+    display: inline-flex;
+    height: 50px;
+    padding: 0;
+    background: #009578;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: 'Quicksand', sans-serif;
+    font: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: scale(1.10);
+    -webkit-transform: scale(1.10);
+    -ms-transform: scale(1.10);
+    cursor: pointer;
+}
+
+.buttonText {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    color: white;
+    height: 100%;
+    font-size: 24px;
+}
+
+.displayContainer {
+    margin: 30px;
+    min-height: 100vh;
+}
 
 .display {
     grid-area: display;
-    border: solid;
-    border-color: blue;
 }
 
 .mobileModal {
